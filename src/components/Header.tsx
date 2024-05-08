@@ -1,8 +1,10 @@
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+
 const headerList = ["HOME", "ABOUT", "COMING SOON", "TOP SELLER", "BOOKS", "AUTHOR", "BLOG", "CONTACT"];
 
 const Header = () => {
   return (
-    <div className="bg-white flex flex-col items-center justify-center p-10">
+    <div className="bg-white flex flex-col items-center justify-center p-10 pb-6">
       {/* HEADER TOP*/}
       <div className="flex justify-between items-center flex-wrap w-full">
         {/* SOCIAL MEDIA */}
@@ -29,8 +31,11 @@ const Header = () => {
         {/* END TITLE */}
 
         {/* SEARCH */}
-        <div className="serach w-1/3 flex justify-end">
-          <input type="text" className="w-80 border bg-gray-100 rounded-full px-4 py-2 focus:outline-none" placeholder="Search"></input>
+        <div className="serach w-1/3 flex justify-end relative">
+          <input type="text" className="w-80 border bg-gray-100 rounded-full px-4 py-2 focus:outline-none relative" placeholder="Search"></input>
+          <span className="w-10 bg-gray-400 flex items-center justify-center rounded-r-full text-white absolute top-0 right-0">
+            <MagnifyingGlassIcon className="w-5 py-[11px] " />
+          </span>
         </div>
         {/* END SEARCH */}
       </div>
@@ -41,10 +46,11 @@ const Header = () => {
       </div>
 
       {/*  HEADER BOTTOM*/}
-      <ul className="flex item-center justify-center gap-5 font-medium">
+      <ul className="flex item-center justify-center gap-5 font-medium  ">
         {headerList.map((item) => (
-          <li key={item} className="hover:cursor-pointer hover:text-gray-500 transition duration-300 ease-in-out">
+          <li key={item} className="hover:cursor-pointer hover:text-gray-500 transition duration-300 ease-in-out group relative">
             {item}
+            <span className="w-full h-px bg-gray-500 hidden group-hover:block group-hover:transition group-hover:transform mt-5 absolute "></span>
           </li>
         ))}
       </ul>
