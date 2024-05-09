@@ -1,6 +1,7 @@
 import Author from "./Authon";
 import Caategory from "./Categrory";
 import Count from "./Count";
+import NewBook from "./NewBook";
 
 const Content = () => {
   return (
@@ -8,6 +9,7 @@ const Content = () => {
       <Caategory />
       <Count />
       <Author />
+      <NewBook />
     </div>
   );
 };

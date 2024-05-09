@@ -1,4 +1,5 @@
 import Content from "./components/Content";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Jumbotron from "./components/Jumbotron";
 
@@ -10,6 +11,8 @@ export default function App() {
       </div>
       <Jumbotron />
       <Content />
+
+      {/* <Footer /> */}
     </>
   );
 }
