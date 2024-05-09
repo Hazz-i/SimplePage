@@ -80,7 +80,7 @@ const Footer = () => {
       {/* END FOOTER TOP */}
 
       {/* FOOTER BOTTOM  */}
-      <p className="my-5 text-center">Copyright ©2024 All rights reserved | This template is made with by Colorlib.com</p>
+      <p className="my-5 text-center">Copyright ©2024 All rights reserved | This template is made by Hazz</p>
       {/* END FOOTER BOTTOM  */}
     </footer>
   );
