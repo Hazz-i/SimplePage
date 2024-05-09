@@ -1,6 +1,6 @@
 # Simple Landing Page
 
-This template i get from google and hope give some reference 
+This template i got from google and hope give some reference 
 
 This build using React, tailwindcss, typescript
 
