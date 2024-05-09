@@ -1,6 +1,15 @@
-type Prorps = {};
+type Props = {
+  books: Array<{
+    img?: string;
+    title: string;
+    author: string;
+    price: string;
+  }>;
+};
 
-const NewBook = () => {
+const NewBook = (props: Props) => {
+  const { books } = props;
+
   return (
     <div className="flex flex-col">
       {/* TTITLE */}
@@ -12,30 +21,16 @@ const NewBook = () => {
 
       {/* BOOKS */}
       <div className="flex items-center justify-center flex-wrap my-10 gap-10">
-        <span className="w-[36rem] h-[20rem] border shadow-lg flex">
-          <div className="w-1/2 border h-full"></div>
-          <div className="w-1/2 bg-gray-300 p-5 flex flex-col gap-2">
-            <p className="text-red-500">$12.00</p>
-            <h1 className="text-3xl">You Are Your Only Limit</h1>
-            <p className="text-gray-600">By John Nathan Mulle</p>
-          </div>
-        </span>
-        <span className="w-[36rem] h-[20rem] border shadow-lg flex">
-          <div className="w-1/2 border h-full"></div>
-          <div className="w-1/2 bg-gray-300 p-5">
-            <p className="text-red-500">$12.00</p>
-            <h1>You Are Your Only Limit</h1>
-            <p>By John Nathan Mulle</p>
-          </div>
-        </span>
-        <span className="w-[36rem] h-[20rem] border shadow-lg flex">
-          <div className="w-1/2 border h-full"></div>
-          <div className="w-1/2 bg-gray-300 p-5">
-            <p className="text-red-500">$12.00</p>
-            <h1>You Are Your Only Limit</h1>
-            <p>By John Nathan Mulle</p>
-          </div>
-        </span>
+        {books.map((book, index) => (
+          <span className="w-[36rem] h-[20rem] border shadow-lg flex" key={index}>
+            <div className={`w-1/2 border h-full ${index > 3 ? "order-0" : "order-1"}`}>{book.img}</div>
+            <div className={`w-1/2 bg-gray-300 p-5 flex flex-col gap-2 ${index > 3 ? "order-1" : "order-0"}`}>
+              <p className="text-red-500">${book.price}</p>
+              <h1 className="text-3xl">{book.title}</h1>
+              <p className="text-gray-600">{book.author}</p>
+            </div>
+          </span>
+        ))}
       </div>
       {/* END BOOKS */}
     </div>
