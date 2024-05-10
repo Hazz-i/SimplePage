@@ -38,11 +38,11 @@ const Caategory = () => {
     <div className="w-full h-[500px] absolute flex items-start justify-center gap-14 -top-24 " data-aos="fade-up">
       {ListCateories.map((category, index) => (
         <span className="w-72 flex flex-col items-center justify-center gap-2 text-center p-7" key={index}>
-          <div className="w-44 h-44 rounded-full bg-gray-200 cursor-pointer duration-500 transition ease-in-out hover:bg-red-200 hover:text-white flex items-center justify-center">
+          <div className="w-44 h-44 rounded-full bg-icons  cursor-pointer duration-500 transition ease-in-out hover:bg-red-200 hover:text-white flex items-center justify-center">
             <i className={`${category?.icon} text-[5rem] `}></i>
           </div>
           <h1 className="font-bold">{category.title}</h1>
-          <p>{category.content}</p>
+          <p className="text-second">{category.content}</p>
         </span>
       ))}
     </div>

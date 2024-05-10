@@ -17,7 +17,7 @@ const Jumbotron = () => {
             <p className="my-6 text-xl text-white">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
 
             <span className="flex gap-2">
-              <button className="bg-gray-500 px-5 py-3 text-white font-">View All Books</button>
+              <button className="bg-[#95adbe] px-5 py-3 text-white font-">View All Books</button>
               <button className="bg-white px-5 py-3 font-semibold">Explore Now</button>
             </span>
           </div>

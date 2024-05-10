@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white flex flex-col">
       {/* FOOTER TOP */}
-      <span className="flex items-start justify-center bg-gray-600 py-10 gap-5 ">
+      <span className="flex items-start justify-center bg-[#1a1a1a] py-10 gap-5 ">
         {/* CONNECT */}
         <div className="flex flex-col w-[200px]">
           <h2 className="text-xl font-semibold mb-5 mt-1">Connect</h2>
