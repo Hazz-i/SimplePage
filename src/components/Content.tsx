@@ -1,4 +1,4 @@
-import Author from "./Authon";
+import Author from "./Author";
 import Caategory from "./Categrory";
 import Count from "./Count";
 import NewBook from "./NewBook";

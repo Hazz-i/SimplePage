@@ -6,7 +6,7 @@ import Jumbotron from "./components/Jumbotron";
 import { useEffect, useRef, useState } from "react";
 
 export default function App() {
-  const containerRef: any = useRef(null);
+  const containerRef = useRef<any>(null);
   const [isAtBottom, setIsAtBottom] = useState(false);
 
   const handleScroll = () => {
@@ -20,6 +20,8 @@ export default function App() {
   };
 
   const scrollAction = () => {
+    console.log(containerRef);
+    console.log(isAtBottom);
     if (isAtBottom) {
       scrollToTop();
     } else {
@@ -62,7 +64,7 @@ export default function App() {
 
       <Footer />
 
-      <button className="fixed bottom-5 right-5 w-10 h-10 bg-black rounded-full flex items-center justify-center text-white" onClick={scrollAction}>
+      <button className="fixed bottom-5 right-5 w-10 h-10 bg-black rounded-full flex items-center justify-center text-white" onClick={() => scrollAction()}>
         {isAtBottom ? <ChevronUpIcon className="w-6" /> : <ChevronDownIcon className="w-6" />}
       </button>
     </div>
